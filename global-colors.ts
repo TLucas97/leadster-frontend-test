@@ -18,6 +18,8 @@ export const colors = {
   dark: {
     100: "#000000",
     200: "#333333",
+    300: "#4F4F4F",
+    400: "#828282",
   },
   yellow: {
     100: "#FFF9D1",
@@ -26,5 +28,5 @@ export const colors = {
   green: {
     100: "#C3F5EA",
     200: "#9EEEDF",
-  }
+  },
 };
