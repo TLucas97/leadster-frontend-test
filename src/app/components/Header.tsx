@@ -1,6 +1,7 @@
 "use client";
 
 import { styled } from "styled-components";
+import { leadster_logo } from "@/app_images";
 
 const HeaderStyles = styled.header`
   width: 100%;
@@ -14,8 +15,8 @@ export default function Header() {
   return (
     <HeaderStyles>
       <img
-        src="https://res.cloudinary.com/domwy2hmn/image/upload/v1688051274/logo_pmmkx8.png"
-        alt=""
+        src={leadster_logo}
+        alt="logo"
       />
     </HeaderStyles>
   );

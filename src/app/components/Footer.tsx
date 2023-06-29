@@ -5,11 +5,12 @@ import { colors } from "../../../global-colors";
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SlSocialInstagram } from "react-icons/sl";
+import { leadster_logo } from "@/app_images";
 import LineSeparator from "./UI_Components/LineSeparator";
 
 const FooterStyles = styled.footer`
   width: 100%;
-  height: 500px;
+  height: 465px;
 
   .footer-header {
     display: flex;
@@ -32,6 +33,7 @@ const FooterStyles = styled.footer`
     .links-list {
       display: flex;
       flex-direction: column;
+      font-size: 0.9rem;
 
       a:nth-of-type(1) {
         margin-top: 2em;
@@ -41,6 +43,11 @@ const FooterStyles = styled.footer`
         color: ${colors.dark[300]};
         text-decoration: none;
         margin: 0.8em 0;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: ${colors.primary[200]};
+        }
       }
 
       .icons-area {
@@ -77,10 +84,7 @@ export default function Footer() {
   return (
     <FooterStyles>
       <div className="footer-header">
-        <img
-          src="https://res.cloudinary.com/domwy2hmn/image/upload/v1688051274/logo_pmmkx8.png"
-          alt="logo"
-        />
+        <img src={leadster_logo} alt="logo" />
         <small>Transformando visitantes em clientes</small>
       </div>
       <div className="links">
@@ -136,7 +140,8 @@ export default function Footer() {
         </div>
         <div>
           <small>
-            Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 | Termos de uso
+            Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |
+            Termos de uso
           </small>
         </div>
       </div>

@@ -8,11 +8,27 @@ import Button from "./components/UI_Components/Button";
 import Card from "./components/UI_Components/Card";
 import Select from "./components/UI_Components/Select";
 import CardsContent from "./cards_content.json";
+import { img_ad, top_10_img, card_small, rating_stars } from "@/app_images";
+import { styled } from "styled-components";
+import { colors } from "../../global-colors";
 import { useState } from "react";
 
 export default function Home() {
   const [selected, setSelected] = useState<string | null>(null);
   const [cardsContent, setCardsContent] = useState(CardsContent);
+
+  const Chip = styled.div`
+    background: transparent;
+    border: 2px solid ${colors.primary[200]};
+    border-radius: 53px 53px 53px 21px;
+    -moz-border-radius: 53px 53px 53px 21px;
+    -webkit-border-radius: 53px 53px 53px 21px;
+    color: ${colors.primary[200]};
+    font-weight: bold;
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+    margin-bottom: 1.5em;
+  `;
 
   function handleSelectChange(selected: string | null) {
     setSelected(selected);
@@ -22,6 +38,7 @@ export default function Home() {
     <AppWrapper>
       <Header />
       <section className="banner-area">
+        <Chip>WEBINARS EXCLUSIVOS</Chip>
         <h2>Menos conversinha</h2>
         <h1>Mais conversão</h1>
         <div className="line-size">
@@ -80,10 +97,7 @@ export default function Home() {
       </section>
       <section className="leads-area">
         <div className="img-area">
-          <img
-            src="https://res.cloudinary.com/domwy2hmn/image/upload/v1688066200/comparativo_img_CTA_fznyku.png"
-            alt="img-ad"
-          />
+          <img src={img_ad} alt="img-ad" />
         </div>
         <div className="text-area">
           <div className="text-card">
@@ -96,25 +110,16 @@ export default function Home() {
             <LineSeparator spacing="1em" />
             <div className="demonstration">
               <Button variant="primary">VER DEMONSTRAÇÃO</Button>
-              <img
-                src="https://res.cloudinary.com/domwy2hmn/image/upload/v1688071005/selo_RD_cmy8zw.png"
-                alt="top-10-img"
-              />
+              <img src={top_10_img} alt="top-10-img" />
             </div>
             <div className="card-review-area">
               <div>
-                <img
-                  src="https://res.cloudinary.com/domwy2hmn/image/upload/v1688071248/no-card-dark_zwmgsy.webp"
-                  alt="card-small"
-                />
+                <img src={card_small} alt="card-small" />
                 <small>Não é necessário cartão de crédito</small>
               </div>
               <span>|</span>
               <div>
-                <img
-                  src="https://res.cloudinary.com/domwy2hmn/image/upload/v1688071416/rating_mngnye.webp"
-                  alt="stars-rating"
-                />
+                <img src={rating_stars} alt="stars-rating" />s
                 <small>
                   <strong>4.9</strong>/5 média de satisfação
                 </small>
