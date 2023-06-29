@@ -1,7 +1,7 @@
 "use client";
 
 import { styled } from "styled-components";
-import { colors } from "../../../../global-colors";
+import { colors } from "../../../../../global-colors";
 import { ButtonProps } from "./interface";
 
 const bgColors = {
