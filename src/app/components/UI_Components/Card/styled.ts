@@ -12,6 +12,10 @@ export const CardStyles = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 310px) {
+        width: 100%;
+    }
+
   .card-banner {
     width: 100%;
     height: 70%;

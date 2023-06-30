@@ -4,10 +4,10 @@ import { ChangeEvent } from "react";
 
 export default function Select({
   options,
-  value,
-  defaultValue,
+  defaultValue = "Selecione uma data",
   onChange,
 }: SelectProps) {
+
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
     onChange(selectedValue);
@@ -15,9 +15,8 @@ export default function Select({
 
   return (
     <SelectStyles
-      value={value || ""}
       onChange={handleChange}
-      defaultValue={defaultValue || ""}
+      defaultValue={defaultValue ?? ""}
     >
       <option disabled>{defaultValue}</option>
       {options.map((option) => (

@@ -17,7 +17,7 @@ export default function Button({
       type={type}
       square={square}
     >
-      {children}
+      <div className="btn">{children}</div>
     </ButtonStyles>
   );
 }

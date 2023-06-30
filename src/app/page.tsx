@@ -52,19 +52,21 @@ export default function Home() {
       <section className="videos-area">
         <div className="videos-header">
           <div className="header-options">
-            <Button>Agências</Button>
-            <Button>Chatbot</Button>
-            <Button>Marketing Digital</Button>
-            <Button>Geração de Leads</Button>
-            <Button>Mídia Paga</Button>
+            <Button variant="secondary">Agências</Button>
+            <Button variant="secondary">Chatbot</Button>
+            <Button variant="secondary">Marketing Digital</Button>
+            <Button variant="primary">Geração de Leads</Button>
+            <Button variant="secondary">Mídia Paga</Button>
+          </div>
+          <div className="menu-btn">
+            <Button variant="tertiary">Menu</Button>
           </div>
           <div className="select-area">
             <p>Ordenar por</p>
             <div>
               <Select
                 options={["option 1", "option 2", "option 3", "option 4"]}
-                defaultValue="Data de publicação"
-                value={selected}
+                defaultValue="Selecione uma data"
                 onChange={handleSelectChange}
               />
             </div>
@@ -72,8 +74,8 @@ export default function Home() {
         </div>
         <LineSeparator spacing="1em" />
         <div className="videos-content">
-          {cardsContent.map((card, index) => (
-            <div key={index}>
+          {cardsContent.map((card) => (
+            <div key={card.id}>
               <Card image_url={card.image_url} description={card.description} />
             </div>
           ))}
@@ -81,18 +83,12 @@ export default function Home() {
         <LineSeparator spacing="3em" />
         <div className="videos-footer">
           <h3>Página</h3>
-          <Button variant="tertiary" square>
-            1
-          </Button>
-          <Button variant="tertiary" square>
-            2
-          </Button>
-          <Button variant="tertiary" square>
-            3
-          </Button>
-          <Button variant="tertiary" square>
-            4
-          </Button>
+          <div>
+            <Button variant="square">1</Button>
+            <Button variant="text">2</Button>
+            <Button variant="text">3</Button>
+            <Button variant="text">4</Button>
+          </div>
         </div>
       </section>
       <section className="leads-area">
@@ -117,9 +113,9 @@ export default function Home() {
                 <img src={card_small} alt="card-small" />
                 <small>Não é necessário cartão de crédito</small>
               </div>
-              <span>|</span>
+              <span className="line-separator-small">|</span>
               <div>
-                <img src={rating_stars} alt="stars-rating" />s
+                <img src={rating_stars} alt="stars-rating" />
                 <small>
                   <strong>4.9</strong>/5 média de satisfação
                 </small>

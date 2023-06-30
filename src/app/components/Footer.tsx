@@ -30,10 +30,20 @@ const FooterStyles = styled.footer`
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 1280px) {
+      flex-wrap: wrap;
+      width: 90%;
+      gap: 2em;
+    }
+
     .links-list {
       display: flex;
       flex-direction: column;
       font-size: 0.9rem;
+
+      @media (max-width: 1280px) {
+        width: 250px;
+      }
 
       a:nth-of-type(1) {
         margin-top: 2em;
@@ -76,6 +86,16 @@ const FooterStyles = styled.footer`
 
     strong {
       color: ${colors.primary[200]};
+    }
+
+    @media (max-width: 980px) {
+      flex-direction: column;
+      padding: 0 0.5em 1.8em 0.5em;
+      gap: 1em;
+    }
+
+    @media (max-width: 520px) {
+      text-align: center;
     }
   }
 `;
@@ -130,7 +150,9 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <LineSeparator spacing="2em" />
+      <div className="line-limiter">
+        <LineSeparator spacing="2em" />
+      </div>
       <div className="footer-bottom">
         <div>
           <small>
