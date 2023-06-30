@@ -10,3 +10,5 @@ export const rating_stars =
   "https://res.cloudinary.com/domwy2hmn/image/upload/v1688071416/rating_mngnye.webp";
 export const leadster_logo =
   "https://res.cloudinary.com/domwy2hmn/image/upload/v1688051274/logo_pmmkx8.png";
+export const leadster_icon =
+  "https://res.cloudinary.com/domwy2hmn/image/upload/v1688143292/asset-header_aptd3g.png";

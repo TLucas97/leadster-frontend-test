@@ -1,7 +1,7 @@
 "use client";
 
 import { styled } from "styled-components";
-import { leadster_logo } from "@/app_images";
+import { leadster_logo } from "../utils/app_images";
 
 const HeaderStyles = styled.header`
   width: 100%;

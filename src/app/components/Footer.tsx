@@ -5,7 +5,7 @@ import { colors } from "../../../global-colors";
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SlSocialInstagram } from "react-icons/sl";
-import { leadster_logo } from "@/app_images";
+import { leadster_logo } from "../utils/app_images";
 import LineSeparator from "./UI_Components/LineSeparator";
 
 const FooterStyles = styled.footer`
