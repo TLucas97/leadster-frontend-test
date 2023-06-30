@@ -1,12 +1,6 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Leadster - Frontend Test",
-  description: "Frontend Test for Leadster company",
-};
+import StyledComponentsRegistry from "./lib/registry";
+import { leadster_icon } from "./utils/app_images";
 
 export default function RootLayout({
   children,
@@ -15,7 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true} >{children}</body>
+      <head>
+        <link rel="icon" href={leadster_icon} />
+      </head>
+      <body suppressHydrationWarning={true}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
