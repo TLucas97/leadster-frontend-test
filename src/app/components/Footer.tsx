@@ -1,12 +1,14 @@
 "use client";
 
 import { styled } from "styled-components";
-import { colors } from "../utils/global-colors";
+import { defineTheme } from "../utils/global-colors";
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SlSocialInstagram } from "react-icons/sl";
 import { leadster_logo } from "../utils/app_images";
 import LineSeparator from "./UI_Components/LineSeparator";
+
+const colors = defineTheme("leadster");
 
 const FooterStyles = styled.footer`
   width: 100%;
@@ -104,7 +106,11 @@ export default function Footer() {
   return (
     <FooterStyles>
       <div className="footer-header">
-        <img src={leadster_logo} alt="logo" data-testid="footer-leadster-logo" />
+        <img
+          src={leadster_logo}
+          alt="logo"
+          data-testid="footer-leadster-logo"
+        />
         <small>Transformando visitantes em clientes</small>
       </div>
       <div className="links">

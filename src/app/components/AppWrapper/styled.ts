@@ -1,7 +1,9 @@
 "use client";
 
-import { styled, keyframes } from "styled-components";
-import { colors } from "../../utils/global-colors";
+import { styled } from "styled-components";
+import { defineTheme } from "../../utils/global-colors";
+
+const colors = defineTheme("leadster");
 
 export const AppWrapperContainerStyles = styled.main`
   width: 100%;
@@ -45,18 +47,18 @@ export const AppWrapperContainerStyles = styled.main`
 
         @media (max-width: 450px) {
           height: 150px;
-          }
+        }
 
         h1 {
           font-size: 4.2rem;
           color: ${colors.primary[200]};
           margin-bottom: 0.1em;
-  
+
           @media (max-width: 600px) {
             font-size: 3.5rem;
             text-align: center;
           }
-  
+
           @media (max-width: 380px) {
             font-size: 2.5rem;
           }
@@ -69,8 +71,8 @@ export const AppWrapperContainerStyles = styled.main`
 
           .leadster-icon-img {
             @media (max-width: 380px) {
-            width: 30px;
-          }
+              width: 30px;
+            }
           }
 
           @media (max-width: 600px) {
@@ -98,7 +100,6 @@ export const AppWrapperContainerStyles = styled.main`
           }
         }
       }
-
 
       .line-size {
         width: 550px;

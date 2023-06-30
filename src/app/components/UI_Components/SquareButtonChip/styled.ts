@@ -2,7 +2,9 @@
 
 import styled from "styled-components";
 import type { SquareButtonChipProps } from "./interface";
-import { colors } from "../../../utils/global-colors";
+import { defineTheme } from "../../../utils/global-colors";
+
+const colors = defineTheme("leadster");
 
 const iconBgColors = {
   primary: colors.primary[400],

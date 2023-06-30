@@ -1,7 +1,9 @@
 "use client";
 
 import { styled, keyframes } from "styled-components";
-import { colors } from "../../../utils/global-colors";
+import { defineTheme } from "../../../utils/global-colors";
+
+const colors = defineTheme("leadster");
 
 export const CardStyles = styled.div`
   background-color: ${colors.white[100]};

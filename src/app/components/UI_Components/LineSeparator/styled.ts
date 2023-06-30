@@ -2,7 +2,9 @@
 
 import styled from "styled-components";
 import { LineSeparatorProps } from "./interface";
-import { colors } from "../../../utils/global-colors";
+import { defineTheme } from "../../../utils/global-colors";
+
+const colors = defineTheme("leadster");
 
 export const LineSeparatorStyles = styled.hr<LineSeparatorProps>`
   width: 100%;

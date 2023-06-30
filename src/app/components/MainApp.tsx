@@ -17,8 +17,10 @@ import {
   leadster_icon,
 } from "../utils/app_images";
 import { styled } from "styled-components";
-import { colors } from "../utils/global-colors";
+import { defineTheme } from "../utils/global-colors";
 import { useState } from "react";
+
+const colors = defineTheme("leadster");
 
 export const metadata = {
   title: "Leadster - Frontend Test",
@@ -71,7 +73,11 @@ export default function MainApp() {
           <div className="highlight-text-box">
             <h1 data-testid="highlighted-text">Mais conversão</h1>
             <div>
-              <img src={leadster_icon} alt="leadster_icon" className="leadster-icon-img" />
+              <img
+                src={leadster_icon}
+                alt="leadster_icon"
+                className="leadster-icon-img"
+              />
             </div>
           </div>
           <div className="line-size">

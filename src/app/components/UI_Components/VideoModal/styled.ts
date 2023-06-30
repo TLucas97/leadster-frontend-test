@@ -1,7 +1,9 @@
 "use client";
 
 import styled from "styled-components";
-import { colors } from "../../../utils/global-colors";
+import { defineTheme } from "../../../utils/global-colors";
+
+const colors = defineTheme("leadster");
 
 export const ModalContainerStyles = styled.div`
   position: fixed;

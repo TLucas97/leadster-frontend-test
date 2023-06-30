@@ -1,8 +1,10 @@
 "use client";
 
 import { styled } from "styled-components";
-import { colors } from "@/app/utils/global-colors";
+import { defineTheme } from "@/app/utils/global-colors";
 import { ButtonProps } from "./interface";
+
+const colors = defineTheme("leadster");
 
 const bgColors = {
   primary: colors.primary[200],
@@ -35,7 +37,7 @@ const getBorderColor = (props: ButtonProps) => {
   if (variant === "primary" || variant === "tertiary") {
     return colors.primary[200];
   } else if (variant === "text") {
-    return 'white';
+    return "white";
   } else {
     return colors.dark[200];
   }
@@ -44,7 +46,8 @@ const getBorderColor = (props: ButtonProps) => {
 export const ButtonStyles = styled.button<ButtonProps>`
   background-color: ${getBackgroundColor};
   color: ${getColor};
-  border: ${(props) => props.variant !== "text" && "1px solid"} ${getBorderColor};
+  border: ${(props) => props.variant !== "text" && "1px solid"}
+    ${getBorderColor};
   padding: 0.4em 1.2em;
   border-radius: ${(props) => (props.variant === "square" ? "0.3em" : "2.5em")};
   font-weight: 600;
@@ -53,7 +56,8 @@ export const ButtonStyles = styled.button<ButtonProps>`
   transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
 
   &:hover {
-    background-color: ${(props) => props.variant === "primary" && colors.white[100]};
+    background-color: ${(props) =>
+      props.variant === "primary" && colors.white[100]};
     border: 1px solid ${colors.primary[200]};
     color: ${colors.primary[200]};
   }
