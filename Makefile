@@ -7,5 +7,8 @@ build:
 cy:
 	npm run cy:open
 
+i:
+	npm install
+
 dev:
 	npm run dev
