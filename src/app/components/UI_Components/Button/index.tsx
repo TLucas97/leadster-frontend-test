@@ -7,7 +7,6 @@ export default function Button({
   onClick,
   disabled,
   type,
-  square,
 }: ButtonProps) {
   return (
     <ButtonStyles
@@ -15,7 +14,6 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       type={type}
-      square={square}
     >
       <div className="btn">{children}</div>
     </ButtonStyles>
