@@ -22,6 +22,16 @@ export const ModalContainerStyles = styled.div`
     width: 550px;
     height: 670px;
 
+    @media (max-width: 580px) {
+      width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      height: 750px;
+      overflow-x: scroll;
+      padding-bottom: 2em;
+    }
+
     .top-line {
       width: 100%;
       height: 5px;
@@ -51,6 +61,11 @@ export const ModalContainerStyles = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 0.3em;
+
+        strong {
+          color: ${colors.primary[200]}
+        }
       }
 
       .video-area {
@@ -81,6 +96,13 @@ export const ModalContainerStyles = styled.div`
         .downloads {
           display: flex;
           gap: 1em;
+
+          @media (max-width: 480px) {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+          }
         }
       }
     }

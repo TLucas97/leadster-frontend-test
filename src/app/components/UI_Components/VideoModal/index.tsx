@@ -5,9 +5,8 @@ import { ModalContainerStyles } from "./styled";
 import LineSeparator from "../LineSeparator";
 import { AiOutlineClose } from "react-icons/ai";
 import SquareButtonChip from "../SquareButtonChip";
-import { useState } from "react";
 
-export default function Modal({
+export default function VideoModal({
   description,
   title,
   video_url,
@@ -25,7 +24,7 @@ export default function Modal({
               <AiOutlineClose width={100} />
             </span>
             <div className="content">
-              <div className="title">{title || "Title"}</div>
+              <div className="title"><strong>Webinar:</strong>{' '} {title || "Title"}</div>
               <div className="video-area">
                 <iframe src={video_url} />
               </div>
