@@ -9,6 +9,7 @@ import Card from "./UI_Components/Card";
 import Select from "./UI_Components/Select";
 import CardsContent from "../utils/cards_content.json";
 import VideoModal from "./UI_Components/VideoModal";
+import { AiOutlineClose } from "react-icons/ai";
 import {
   img_ad,
   top_10_img,
@@ -29,6 +30,7 @@ export const metadata = {
 
 export default function MainApp() {
   const [selected, setSelected] = useState<string | null>(null);
+  const [miniModalView, setMiniModalView] = useState(false);
   const [cardsContent, setCardsContent] = useState(CardsContent);
   const [videoModalView, setVideoModalView] = useState(false);
   const [videoModalUrl, setVideoModalUrl] = useState("");
@@ -46,6 +48,48 @@ export default function MainApp() {
     padding: 0.5em 1em;
     font-size: 0.8rem;
     margin-bottom: 1.5em;
+  `;
+
+  const MiniModal = styled.div`
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mini-modal {
+      background-color: ${colors.white[100]};
+      width: 250px;
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      border-radius: 15px;
+      position: relative;
+      animation: scaleIn 0.5s ease-in-out;
+
+      .close-btn {
+        position: absolute;
+        top: 0.4em;
+        right: 0.7em;
+      }
+    }
   `;
 
   function handleSelectChange(selected: string | null) {
@@ -97,9 +141,26 @@ export default function MainApp() {
               <Button variant="primary">Geração de Leads</Button>
               <Button variant="secondary">Mídia Paga</Button>
             </div>
-            <div className="menu-btn">
+            <div className="menu-btn" onClick={() => setMiniModalView(true)}>
               <Button variant="tertiary">Menu</Button>
             </div>
+            {miniModalView && (
+              <MiniModal>
+                <div className="mini-modal">
+                  <div
+                    className="close-btn"
+                    onClick={() => setMiniModalView(false)}
+                  >
+                    <AiOutlineClose />
+                  </div>
+                  <Button variant="secondary">Agências</Button>
+                  <Button variant="secondary">Chatbot</Button>
+                  <Button variant="secondary">Marketing Digital</Button>
+                  <Button variant="primary">Geração de Leads</Button>
+                  <Button variant="secondary">Mídia Paga</Button>
+                </div>
+              </MiniModal>
+            )}
             <div className="select-area">
               <p>Ordenar por</p>
               <div>
