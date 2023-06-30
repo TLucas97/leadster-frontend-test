@@ -46,8 +46,7 @@ const getBorderColor = (props: ButtonProps) => {
 export const ButtonStyles = styled.button<ButtonProps>`
   background-color: ${getBackgroundColor};
   color: ${getColor};
-  border: ${(props) => props.variant !== "text" && "1px solid"}
-    ${getBorderColor};
+  border: ${(props) => props.variant !== "text" && "1px solid"} ${getBorderColor};
   padding: 0.4em 1.2em;
   border-radius: ${(props) => (props.variant === "square" ? "0.3em" : "2.5em")};
   font-weight: 600;
@@ -58,7 +57,7 @@ export const ButtonStyles = styled.button<ButtonProps>`
   &:hover {
     background-color: ${(props) =>
       props.variant === "primary" && colors.white[100]};
-    border: 1px solid ${colors.primary[200]};
+    border: ${(props) => props.variant !== "text" && "1px solid"} ${getBorderColor};
     color: ${colors.primary[200]};
   }
 

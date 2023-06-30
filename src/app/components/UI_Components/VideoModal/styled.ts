@@ -1,11 +1,20 @@
 "use client";
 
-import styled from "styled-components";
+import { styled, keyframes } from "styled-components";
 import { defineTheme } from "../../../utils/global-colors";
 
 const colors = defineTheme("leadster");
 
 export const ModalContainerStyles = styled.div`
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   position: fixed;
   top: 0;
   left: 0;
@@ -23,6 +32,7 @@ export const ModalContainerStyles = styled.div`
     position: relative;
     width: 550px;
     height: 670px;
+    animation: scaleIn 0.5s ease-in-out;
 
     @media (max-width: 580px) {
       width: 100%;
