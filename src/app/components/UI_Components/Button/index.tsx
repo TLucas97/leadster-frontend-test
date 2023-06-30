@@ -15,7 +15,7 @@ export default function Button({
       disabled={disabled}
       type={type}
     >
-      <div className="btn">{children}</div>
+      <div className="btn" data-testid="ui-btn">{children}</div>
     </ButtonStyles>
   );
 }

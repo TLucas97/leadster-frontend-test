@@ -104,13 +104,13 @@ export default function Footer() {
   return (
     <FooterStyles>
       <div className="footer-header">
-        <img src={leadster_logo} alt="logo" />
+        <img src={leadster_logo} alt="logo" data-testid="footer-leadster-logo" />
         <small>Transformando visitantes em clientes</small>
       </div>
       <div className="links">
         <div className="links-list">
           <h4>Links principais</h4>
-          <a href="#">Home</a>
+          <a href="#header">Home</a>
           <a href="#">Ferramenta</a>
           <a href="#">Preços</a>
           <a href="#">Contatos</a>
@@ -153,7 +153,7 @@ export default function Footer() {
       <div className="line-limiter">
         <LineSeparator spacing="2em" />
       </div>
-      <div className="footer-bottom">
+      <div className="footer-bottom" data-testid="footer-last-texts">
         <div>
           <small>
             Copyright 0 2015 - 2022 Todos os direitos reservados{" "}

@@ -67,10 +67,10 @@ export default function MainApp() {
     <AppWrapper>
       <>
         <Header />
-        <section className="banner-area">
+        <section className="banner-area" data-testid="main">
           <Chip>WEBINARS EXCLUSIVOS</Chip>
           <h2>Menos conversinha</h2>
-          <h1>Mais conversão</h1>
+          <h1 data-testid="highlighted-text">Mais conversão</h1>
           <div className="line-size">
             <LineSeparator spacing="1em" />
           </div>
@@ -133,7 +133,7 @@ export default function MainApp() {
         </section>
         <section className="leads-area">
           <div className="img-area">
-            <img src={img_ad} alt="img-ad" />
+            <img src={img_ad} alt="img-ad" data-testid="ad-img" />
           </div>
           <div className="text-area">
             <div className="text-card">

@@ -16,7 +16,9 @@ export default function Header() {
     <HeaderStyles>
       <img
         src={leadster_logo}
-        alt="logo"
+        alt="leadster-logo"
+        data-testid="header-leadster-logo"
+        id="header"
       />
     </HeaderStyles>
   );

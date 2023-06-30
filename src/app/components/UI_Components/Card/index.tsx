@@ -11,14 +11,14 @@ export default function Card({ description, image_url, onClick }: CardProps) {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div className="card-banner">
+      <div className="card-banner" data-testid="card-img-banner">
         <img src={image_url} alt="card-image" />
       </div>
       <div className="card-description">
         <p>{description}</p>
       </div>
       {isHovering && (
-        <div className="absolute-middle-play-btn">
+        <div className="absolute-middle-play-btn" data-testid="card-middle-play-btn">
           <Button variant="secondary" onClick={onClick}>
             <h3>Assistir vídeo</h3>
           </Button>
