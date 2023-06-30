@@ -1,7 +1,7 @@
 "use client";
 
 import { styled, keyframes } from "styled-components";
-import { colors } from "../../../../global-colors";
+import { colors } from "../../utils/global-colors";
 
 export const AppWrapperContainerStyles = styled.main`
   width: 100%;

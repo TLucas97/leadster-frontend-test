@@ -1,7 +1,7 @@
 "use client";
 
 import { styled, keyframes } from "styled-components";
-import { colors } from "../../../../../global-colors";
+import { colors } from "../../../utils/global-colors";
 
 export const CardStyles = styled.div`
   background-color: ${colors.white[100]};

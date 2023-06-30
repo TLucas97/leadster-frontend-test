@@ -1,7 +1,7 @@
 "use client";
 
 import { styled } from "styled-components";
-import { colors } from "../../../global-colors";
+import { colors } from "../utils/global-colors";
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SlSocialInstagram } from "react-icons/sl";

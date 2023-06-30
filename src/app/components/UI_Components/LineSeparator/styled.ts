@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { LineSeparatorProps } from "./interface";
-import { colors } from "../../../../../global-colors";
+import { colors } from "../../../utils/global-colors";
 
 export const LineSeparatorStyles = styled.hr<LineSeparatorProps>`
   width: 100%;

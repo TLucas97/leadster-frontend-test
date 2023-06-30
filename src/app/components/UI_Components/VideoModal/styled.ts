@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { colors } from "../../../../../global-colors";
+import { colors } from "../../../utils/global-colors";
 
 export const ModalContainerStyles = styled.div`
   position: fixed;
@@ -64,7 +64,7 @@ export const ModalContainerStyles = styled.div`
         gap: 0.3em;
 
         strong {
-          color: ${colors.primary[200]}
+          color: ${colors.primary[200]};
         }
       }
 

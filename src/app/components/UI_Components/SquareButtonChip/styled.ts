@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import type { SquareButtonChipProps } from "./interface";
-import { colors } from "../../../../../global-colors";
+import { colors } from "../../../utils/global-colors";
 
 const iconBgColors = {
   primary: colors.primary[400],
@@ -14,7 +14,7 @@ const textBgColors = {
   primary: colors.primary[300],
   yellow: colors.yellow[100],
   success: colors.green[100],
-}
+};
 
 export const SquareButtonChipStyles = styled.button<SquareButtonChipProps>`
   border: none;

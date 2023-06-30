@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import AppWrapper from "./AppWrapper";
 import Header from "./Header";
@@ -9,9 +9,14 @@ import Card from "./UI_Components/Card";
 import Select from "./UI_Components/Select";
 import CardsContent from "../utils/cards_content.json";
 import VideoModal from "./UI_Components/VideoModal";
-import { img_ad, top_10_img, card_small, rating_stars } from "../utils/app_images";
+import {
+  img_ad,
+  top_10_img,
+  card_small,
+  rating_stars,
+} from "../utils/app_images";
 import { styled } from "styled-components";
-import { colors } from "../../../global-colors";
+import { colors } from "../utils/global-colors";
 import { useState } from "react";
 
 export const metadata = {
