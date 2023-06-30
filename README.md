@@ -50,7 +50,6 @@ This project was built using the following technologies:
 - **GitHub Actions**: GitHub Actions is a continuous integration and deployment platform provided by GitHub. It allows you to automate your workflows and build/test/deploy your applications.
 - **Docker**: Docker is a containerization platform that allows you to package your application and its dependencies into a lightweight, portable container.
 - **TypeScript**: TypeScript is a statically-typed superset of JavaScript that adds optional types to the language. It helps catch errors and improve code quality.
-- **React-animate-on-scroll**: React-animate-on-scroll is a library that provides scroll-based animations for React components. It allows you to animate elements as they come into the viewport during scrolling.
   
 ## Decision making during the project
 - **styled-components usage**: I decided to use styled components as required and decided to create a theme for the whole app for a future change case scenario on the app.
