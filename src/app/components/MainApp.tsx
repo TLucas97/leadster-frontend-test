@@ -14,6 +14,7 @@ import {
   top_10_img,
   card_small,
   rating_stars,
+  leadster_icon,
 } from "../utils/app_images";
 import { styled } from "styled-components";
 import { colors } from "../utils/global-colors";
@@ -22,9 +23,6 @@ import { useState } from "react";
 export const metadata = {
   title: "Leadster - Frontend Test",
   description: "Frontend Test for Leadster company",
-  icons: {
-    icon: "https://res.cloudinary.com/domwy2hmn/image/upload/v1688143292/asset-header_aptd3g.png",
-  },
 };
 
 export default function MainApp() {
@@ -70,7 +68,12 @@ export default function MainApp() {
         <section className="banner-area" data-testid="main">
           <Chip>WEBINARS EXCLUSIVOS</Chip>
           <h2>Menos conversinha</h2>
-          <h1 data-testid="highlighted-text">Mais conversão</h1>
+          <div className="highlight-text-box">
+            <h1 data-testid="highlighted-text">Mais conversão</h1>
+            <div>
+              <img src={leadster_icon} alt="leadster_icon" className="leadster-icon-img" />
+            </div>
+          </div>
           <div className="line-size">
             <LineSeparator spacing="1em" />
           </div>

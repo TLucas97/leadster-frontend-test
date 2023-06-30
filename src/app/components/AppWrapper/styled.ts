@@ -38,20 +38,67 @@ export const AppWrapperContainerStyles = styled.main`
         }
       }
 
-      h1 {
-        font-size: 4.2rem;
-        color: ${colors.primary[200]};
-        margin-bottom: 0.1em;
+      .highlight-text-box {
+        position: relative;
+        height: 100px;
+        padding: 0 1.2em;
 
-        @media (max-width: 500px) {
-          font-size: 3.5rem;
-          text-align: center;
+        @media (max-width: 450px) {
+          height: 150px;
+          }
+
+        h1 {
+          font-size: 4.2rem;
+          color: ${colors.primary[200]};
+          margin-bottom: 0.1em;
+  
+          @media (max-width: 600px) {
+            font-size: 3.5rem;
+            text-align: center;
+          }
+  
+          @media (max-width: 380px) {
+            font-size: 2.5rem;
+          }
         }
 
-        @media (max-width: 380px) {
-          font-size: 2.5rem;
+        div {
+          position: absolute;
+          top: 0.2em;
+          right: 0;
+
+          .leadster-icon-img {
+            @media (max-width: 380px) {
+            width: 30px;
+          }
+          }
+
+          @media (max-width: 600px) {
+            top: 0;
+          }
+
+          @media (max-width: 450px) {
+            top: 4.2em;
+            right: 10%;
+          }
+
+          @media (max-width: 380px) {
+            top: 0;
+            right: 0;
+          }
+
+          @media (max-width: 330px) {
+            top: 3.3em;
+            right: 3em;
+          }
+
+          @media (max-width: 300px) {
+            top: 3.3em;
+            right: 1.1em;
+          }
         }
       }
+
 
       .line-size {
         width: 550px;
